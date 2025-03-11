@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .slider-container {
+    width: 100%;
+    min-height: 100vh; /* Full-screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url('xh1_hero.jpg.pagespeed.ic.bqAA7GziCl.jpg') no-repeat center center/cover;
+    overflow: hidden;
+  }
+
+  /* Dark Overlay */
+  .slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay with opacity */
+    z-index: 1;
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Limit width */
+    z-index: 2; /* Above the overlay */
+  }
+
+  .slider-item {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .content-container {
+    width: 100%;
+  }
+
+  /* Header */
+  .text-area h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .text-area h1 span {
+    color: #4D148C; /* Highlight color */
+  }
+
+  /* Tracking Form */
+  .tracking-form {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .input-group input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #4D148C;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .input-group button {
+    padding: 12px 24px;
+    background: #4D148C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .input-group button:hover {
+    background: black; /* Darker hover */
+  }
+
+  /* Shipment Info */
+  #details-container {
+    margin-top: 20px;
+    word-wrap: break-word;
+    color: white; /* Ensure visibility */
+  }
+
+  /* Additional Info */
+  .info-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ddd; /* Light text */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .text-area h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .text-area h1 {
+      font-size: 2rem;
+    }
+
+    .input-group {
+      flex-direction: column; /* Stack input and button */
+    }
+
+    .input-group input,
+    .input-group button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-area h1 {
+      font-size: 1.8rem;
+    }
+
+    .input-group input,
+    .input-group button {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .main-menu {
+      display: none !important;
+    }
+    
+    .mobile_menu {
+      display: block !important;
+    }
+  }
+  
+
+  .custom-hamburger-menu {
+    display: flex; /* Allows positioning */
+    justify-content: flex-end; /* Moves it to the right */
+  }
+  
+  /* Hamburger Icon */
+  .hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+  }
+  
+  .hamburger-btn .bar {
+    width: 30px;
+    height: 3px;
+    background: #6a0dad; /* Purple */
+    transition: 0.3s;
+  }
+  
+  /* Hamburger Popup */
+  .hamburger-menu-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+  }
+  
+  /* Show Menu */
+  .hamburger-menu-content.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #6a0dad; /* Purple */
+    cursor: pointer;
+  }
+  
+  /* Menu Links */
+  .hamburger-menu-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .hamburger-menu-content ul li {
+    margin: 20px 0;
+  }
+  
+  .hamburger-menu-content ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #6a0dad; /* Purple */
+    transition: color 0.3s;
+  }
+  
+  .hamburger-menu-content ul li a:hover {
+    color: #4b0082; /* Darker Purple */
+  }
+
+  #loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it overlays other content */
+  }
+
+  
+  

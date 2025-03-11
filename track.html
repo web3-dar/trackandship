@@ -1,0 +1,561 @@
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Track Consigment Details - FedEx Cargo Shipment</title>
+    
+        <link rel="stylesheet" id="wp-block-library-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wpcargo-custom-bootstrap-styles-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/main.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wpcargo-fontawesome-styles-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/fontawesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wpcargo-styles-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/wpcargo-style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wpcargo-datetimepicker-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/jquery.datetimepicker.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="shifters-lite-font-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/css.css" type="text/css" media="all">
+    <link rel="stylesheet" id="shifters-lite-basic-style-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="nivo-slider-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/nivo-slider.css" type="text/css" media="all">
+    <link rel="stylesheet" id="fontawesome-all-style-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/fontawesome-all.css" type="text/css" media="all">
+    <link rel="stylesheet" id="shifters-lite-responsive-css" href="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/responsive.css" type="text/css" media="all">
+        <style type="text/css">
+            :root {
+              --wpcargo: #04a301;
+            }
+        </style>
+        <style>
+             #loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it overlays other content */
+  }
+
+  
+            .wpcargo-track {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /* align-items: center; */
+                /* height: 100vh; */
+            }
+        
+            .search-box {
+                width: 100%;
+                max-width: 500px;
+            }
+        
+            .input-container {
+                display: flex;
+
+                align-items: center;
+                gap: 10px; /* Space between input and button */
+            }
+        
+            #trackingId {
+                flex: 1; /* Input takes remaining space */
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 14px;
+            }
+        
+            #track {
+                background-color: #4D148C; /* FedEx purple */
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background 0.3s ease;
+            }
+        
+            #track:hover {
+                background-color: #3a0f6d; /* Darker purple on hover */
+            }
+        </style>
+
+            <style type="text/css"> 					
+            a, .defaultpost_fulstyle h2 a:hover,
+            #sidebar ul li a:hover,						
+            .defaultpost_fulstyle h3 a:hover,       
+            .hdr_social a:hover,       						
+            .postmeta a:hover,			
+            .button:hover,
+            .infobox i,
+            .blog_postmeta a:hover,
+            .wel2column h4 a:hover,
+            .site-footer ul li a:hover, 
+            .site-footer ul li.current_page_item a
+            
+                { color:#e32222;}					 
+                
+            .pagination ul li .current, .pagination ul li a:hover, 
+            #commentform input#submit:hover,		
+            .nivo-controlNav a.active,
+            .navigation_bar,
+            .site-navi ul li ul,		
+            a.blogreadmore,
+            .learnmore:hover,
+            .infobox a.get_an_enquiry:hover,
+            .welcome_contentwrap .btnstyle1,													
+            #sidebar .search-form input.search-submit,				
+            .wpcf7 input[type='submit'],				
+            nav.pagination .page-numbers.current,		
+            .blogpostmorebtn:hover,
+            .nivo-caption .slide_morebtn:hover,
+            .navigation_bar:after,
+            .column4_colorbox,		
+            .toggle a	
+                { background-color:#e32222;}
+                
+            
+            .tagcloud a:hover,
+            .hdr_social a:hover,
+            .welcome_contentwrap p,
+            h3.widget-title::after,		
+            blockquote	        
+                { border-color:#e32222;}
+                
+            .site-header			        
+                { border-bottom: 2px solid #e32222;}
+                
+        /*Hover CSS Cover*/
+        .header-top,
+        .infobox a.get_an_enquiry,
+        .header-top:after,
+        .column4_colorbox.second_column,
+        .nivo-caption .slide_morebtn,
+        .nivo-caption h2:after,	
+        .learnmore  
+                { background-color:#ff9c00;}		
+        
+        .site-navi ul li a:hover, 
+        .site-navi ul li.current-menu-item a,
+        .site-navi ul li.current-menu-parent a.parent,
+        .site-navi ul li.current-menu-item ul.sub-menu li a:hover        
+                { color:#ff9c00;}	
+                
+        .site-header			        
+                { border-top: 2px solid #ff9c00;}			
+                
+                                            
+                .pagination ul li .current, .pagination ul li a:hover, #commentform input#submit:hover, .nivo-controlNav a.active, .navigation_bar, .site-navi ul li ul, a.blogreadmore, .learnmore:hover, .infobox a.get_an_enquiry:hover, .welcome_contentwrap .btnstyle1, #sidebar .search-form input.search-submit, .wpcf7 input[type="submit"], nav.pagination .page-numbers.current, .blogpostmorebtn:hover, .nivo-caption .slide_morebtn:hover, .navigation_bar::after, .column4_colorbox, .toggle a{
+    background-color: #4d148c!important;
+}
+         
+.site-header {
+    border-top: 2px solid #4d148c!important;
+    border-bottom: 2px solid #4d148c;
+}
+
+:root {
+    --wpcargo: #4d148c !important;
+}
+
+#shipment-status #result-status-header {
+    background-color: #4d148c !important;
+}
+
+.comp_logo {
+    background: #4d148c !important;
+}
+        </style> 
+        <style type="text/css">
+                .site-header{
+                background: url() no-repeat;
+                background-position: center top;
+            }
+            
+        </style>
+        
+            <style type="text/css">		
+            .logo h1,
+            .logo p{
+                clip: rect(1px, 1px, 1px, 1px);
+                position: absolute;
+            }
+        </style>
+        
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+        </head>
+    <body class="page-template page-template-template-full-width page-template-template-full-width-php page page-id-5">
+    <a class="skip-link screen-reader-text" href="#site_content_panel">
+    Skip to content</a>
+    <div id="sitelayout" class="boxlayout">
+    
+    <div class="site-header siteinner no-sticky"> 
+      <div class="container">       
+           <div class="header-top">          
+                <div class="left">
+                          
+             </div>
+                     <div class="clear"></div>
+          </div><!--end header-top-->
+         
+       
+          <div class="logo">
+                       <h1><a href="index.htm" rel="home">FedEx Shipping Portal</a></h1>
+                      </div><!-- logo -->
+          
+          
+          
+         
+    
+     <div class="clear"></div> 
+        <div class="navigation_bar">
+             <div class="toggle">
+               <a class="toggleMenu" href="#" style="display: none;">Menu</a>
+             </div><!-- toggle --> 
+             <div class="site-navi">                   
+                <div class="menu-track-container"><ul id="menu-track" class="menu"><li id="menu-item-390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a href="index.htm">Home</a></li>
+    <li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-391"><a href="track.html" aria-current="page">Track</a></li>
+    </ul></div>         </div><!--.site-navi -->
+             <div class="clear"></div>  
+       </div><!--.navigation_bar -->
+      <div class="clear"></div> 
+      </div><!-- .container --> 
+    </div><!--.site-header --> 
+      
+           
+            
+    <div class="container">
+    <div id="site_content_panel">
+         <div class="left_panel_content fullwidth">               
+                                  <h1 class="entry-title">Track</h1>    
+                       <div class="entry-content">
+                          <style type="text/css">
+        @media
+            only screen 
+            and (max-width: 760px), (min-device-width: 768px) 
+            and (max-device-width: 1024px)  {
+                /* Force table to not be like tables anymore */
+                table#wpcargo-track-table tr td input[type="text"], 
+                table#wpcargo-track-table tr td input[type="submit"],
+                table#wpcargo-track-table tr td select, 
+                table#wpcargo-track-table tr td textarea,
+                form table#wpcargo-track-table{
+                    width:100% !important;
+                    min-width: 100%;
+                }
+                table#wpcargo-track-table, 
+                #wpcargo-track-table thead, 
+                #wpcargo-track-table tbody, 
+                #wpcargo-track-table th, 
+                #wpcargo-track-table td,
+                #wpcargo-track-table tr {
+                    display: block;
+                }
+                /* Hide table headers (but not display: none;, for accessibility) */
+                #wpcargo-track-tablethead tr {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+                #wpcargo-track-table tr {
+                    margin: 0 0 1rem 0;
+                }
+                #wpcargo-track-table tr:nth-child(odd) {
+                    background: #ccc;
+                }
+                #wpcargo-track-table td {
+                    /* Behave  like a "row" */
+                    border: none;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    padding: 0;
+                }
+                #wpcargo-track-table td:before {
+                    position: absolute;
+                    top: 0;
+                    left: 6px;
+                    width: 45%;
+                    padding-right: 10px;
+                    white-space: nowrap;
+                }
+                #wpcargo-track-table .submit-track {
+                    padding:16px 0;
+                }
+        }
+        th.text-white {
+    color: #fff !important;
+}
+    
+    </style>
+   <div class="wpcargo-track wpcargo">
+    <form id="trackingForm" class="search-box">
+        <div class="input-container">
+            <input type="text" id="trackingId" placeholder="Enter Tracking ID" required />
+            <button id="track" type="submit">Track & Trace</button>
+        </div>
+    </form>
+</div>
+
+<div id="loadingOverlay" style="display: none;">
+    <img src="loading.gif"  width="250"  height="200" />
+  </div>
+
+<br> <br>
+    
+
+    <div id="wpcargo-result-wrapper">
+    <div class="wpcargo-result wpcargo" id="wpcargo-result">
+        <script>
+            function wpcargo_print(wpcargo_class) {
+                var printContents = document.getElementById(wpcargo_class).innerHTML;
+                var originalContents = document.body.innerHTML;
+                document.body.innerHTML = printContents;
+                window.print();
+                document.body.innerHTML = originalContents;
+            }
+        </script>
+        <style>
+            a:link:after,
+            a:visited:after {
+                content: "";
+            }
+            .noprint {
+                display: none !important;
+            }
+            a:link:after,
+            a:visited:after {
+                display: none;
+                content: "";
+            }
+        </style>
+
+        
+
+        
+
+        <div class="wpcargo-print-btn">
+            <a class="wpcargo-print wpcargo-btn wpcargo-btn-sm wpcargo-btn-primary" type="button" onclick="wpcargo_print('wpcargo-result-print')">Print Invoice</a>
+        </div>
+        
+        <div id="wpcargo-result-print" class="wpcargo-wrap-details wpcargo-container">
+            <div id="wpcargo-track-header" class="wpcargo-col-md-12 text-center detail-section">
+                <div class="comp_logo">
+                    <img src="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/website_logo.png" style="width: 50%;object-fit: cover;padding: 20px 0;">
+                </div>
+                <!-- comp_logo -->
+                
+            </div>
+
+            <!-- <div id="shipmentDetails"></div> -->
+
+            <div id="shipmentDetails"></div>
+
+
+            
+            <!-- <div id="shipper-info" class="wpcargo-row">
+                <div class="wpcargo-col-md-6 detail-section">
+                    <p id="shipper-header" class="header-title"><strong>Sender Information</strong></p>
+                    <p class="shipper details" id="shipper-details">
+                        <span id="sender-name"></span> <br>
+                        Frankfurt, Germany <br>
+                        <img draggable="false" role="img" class="emoji" alt="☎️" src="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/260e.svg"> Private <br>
+                        <br>
+                    </p>
+                </div>
+
+
+                <div class="wpcargo-col-md-6 detail-section">
+                    <p id="receiver-header" class="header-title"><strong>Receiver Information</strong></p>
+                    <p class="receiver details">
+                        Charisse Robinson <br>
+                        1403 Highway 29 Wiggins,MS 39577<br>
+                        <img draggable="false" role="img" class="emoji" alt="☎️" src="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/260e.svg"> Confidential <br>
+                        <br>
+                    </p>
+                </div>
+                <div class="clear-line"></div>
+            </div>
+            <div id="shipment-status" class="wpcargo-row" style="text-align: center;">
+                <p id="result-status-header">Shipment Status: In Transit</p>
+            </div>
+            <div id="shipment-info" class="wpcargo-row detail-section">
+                <div class="wpcargo-col-md-12">
+                    <p id="shipment-information-header" class="header-title"><strong>Shipment Information</strong></p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Origin:</p>
+                    <p class="wpcargo-label-info">Germany <img draggable="false" role="img" class="emoji" alt="Germany" src="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/de.htm"></p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Package:</p>
+                    <p class="wpcargo-label-info">Package </p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Status:</p>
+                    <p class="wpcargo-label-info"><span class="in_transit">In Transit</span></p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Destination:</p>
+                    <p class="wpcargo-label-info">United States of America <img draggable="false" role="img" class="emoji" alt="🇩🇰" src="Track%20Consigment%20Details%20-%20FedEx%20Cargo%20Shipment_files/us.htm"></p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Carrier:</p>
+                    <p class="wpcargo-label-info">Fedex</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Type of Shipment:</p>
+                    <p class="wpcargo-label-info">Express Shipment</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Weight:</p>
+                    <p class="wpcargo-label-info">72lbs</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Shipment Mode:</p>
+                    <p class="wpcargo-label-info">FedEx Truck Shipment</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Carrier Reference No.:</p>
+                    <p class="wpcargo-label-info">09248</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Product:</p>
+                    <p class="wpcargo-label-info">Undisclosed </p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Qty:</p>
+                    <p class="wpcargo-label-info">Standard</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Payment Mode:</p>
+                    <p class="wpcargo-label-info">Cash</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Total Freight:</p>
+                    <p class="wpcargo-label-info">Standard </p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Expected Delivery Date:</p>
+                    <p class="wpcargo-label-info">2025-03-13</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Expected Delivery Time:</p>
+                    <p class="wpcargo-label-info">18:00</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Pick-up Date:</p>
+                    <p class="wpcargo-label-info">2025-03-11</p>
+                </div>
+                <div class="wpcargo-col-md-4">
+                    <p class="wpcargo-label">Pick-up Time:</p>
+                    <p class="wpcargo-label-info">10:00</p>
+                </div>
+
+                <div class="wpcargo-col-md-12">
+                    <p class="wpcargo-label">Comments:</p>
+                    <p class="wpcargo-label-info">Package In-Transit </p>
+                </div>
+            </div>
+            <div id="wpcargo-history-section" class="wpcargo-history-details print-section wpcargo-table-responsive table-responsive">
+                <p class="header-title"><strong>Shipment History</strong></p>
+                <table id="shipment-history" class="table wpcargo-table" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th class="text-white">Date</th>
+                            <th class="text-white">Time</th>
+                            <th class="text-white">Location</th>
+                            <th class="text-white">Status</th>
+                            <th class="text-white">Updated By</th>
+                            <th class="text-white">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            
+                                <tr class="history-row">
+                                    <td class="history-data date 2025-03-10">2025-03-10</td>
+                                    <td class="history-data time">09:00</td>
+                                    <td class="history-data location">USA</td>
+                                    <td class="history-data status">In Transit</td>
+                                    <td class="history-data updated-name first_class_delivery">Fedex</td>
+                                    <td class="history-data remarks on_delivery_movement">Package In-Transit </td>
+                                </tr>
+                            
+                        
+                        
+                    </tbody>
+                </table>
+            </div> -->
+        </div>
+
+        
+
+
+    </div>
+</div>
+
+                                                               </div><!-- entry-content -->
+                                            
+        </div><!-- left_panel_content-->   
+    </div><!-- .site_content_panel --> 
+    </div><!-- .container --> 
+    
+    <div class="site-footer">
+               <div class="container fixfooter">           
+                        
+                         
+                
+               
+                         
+               
+               <div class="clear"></div>
+          </div><!--end .container-->            
+    
+            <div class="footer-bottom"> 
+                <div class="container">
+                    <div class="powerby">
+                        FedEx Shipping Portal -  <script>document.write(new Date().getFullYear())</script>2025  
+                    </div>                        	
+                    
+                    <div class="clear"></div>
+                                    
+                 </div><!--end .container-->             
+            </div><!--end .footer-bottom-->  
+                         
+         </div><!--end #site-footer-->
+    </div><!--#end sitelayout-->
+    
+ <script>document.getElementById("trackingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    // Get the entered tracking ID
+    const trackingId = document.getElementById("trackingId").value.trim();
+  
+    // Save it to localStorage
+    localStorage.setItem("trackingId", trackingId);
+  
+    // Show the loading overlay
+    document.getElementById("loadingOverlay").style.display = "flex";
+  
+    // Wait for 3 seconds before redirecting
+    setTimeout(function () {
+      // Redirect to track.html
+      window.location.href = "track.html";
+    }, 3000); // 3000 milliseconds = 3 seconds
+  });
+  </script>
+
+    <script src="details.js"></script>
+    </body></html>
