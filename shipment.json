@@ -80,42 +80,42 @@
       ]
     },
     {
-      "trackingId": "09250",
+      "trackingId": "CA77121679",
       "sender": {
-        "name": "Michael Zhou",
-        "location": "Beijing, China",
+        "name": "James Bullman",
+        "location": "Selkirk, MB R1A 4M2, Canada",
         "contact": "Private"
       },
       "receiver": {
-        "name": "Sophia Bennett",
-        "address": "890 Pine Road, Los Angeles, CA 90001",
+        "name": "Michael waldner",
+        "address": "50 Brookside Crescent, Portage la Prairie, MB R1N 3W8",
         "contact": "Confidential"
       },
       "shipment": {
-        "origin": "China",
-        "destination": "United States of America",
-        "carrier": "UPS",
+        "origin": "Canada",
+        "destination": "50 Brookside Crescent, Portage la Prairie, MB R1N 3W8",
+        "carrier": "Fedex",
         "type": "Priority Shipment",
         "weight": "30lbs",
-        "mode": "Ocean Freight",
-        "product": "Clothing",
-        "qty": "3",
-        "paymentMode": "PayPal",
-        "status": "Shipped",
-        "pickupDate": "2025-03-08",
+        "mode": "FedEx Truck Shipment",
+        "product": "Undisclosed",
+        "qty": "1",
+        "paymentMode": "Cash",
+        "status": "In Transit",
+        "pickupDate": "2025-03-18",
         "pickupTime": "14:45",
-        "deliveryDate": "2025-03-15",
+        "deliveryDate": "2025-03-19",
         "deliveryTime": "09:30",
-        "comments": "Package en route to destination"
+        "comments": "Package In-Transit"
       },
       "history": [
         {
-          "date": "2025-03-09",
+          "date": "2025-03-18",
           "time": "15:00",
-          "location": "Shanghai, China",
-          "status": "Dispatched",
-          "updatedBy": "Logistics",
-          "remarks": "Package left warehouse"
+          "location": "Canada",
+          "status": "Package In-Transit",
+          "updatedBy": "Fedex",
+          "remarks": "Package In-Transit"
         }
       ]
     }
