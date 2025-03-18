@@ -29,7 +29,7 @@ if (!trackingId) {
               <p class="shipper details">
                 <span>${sender.name}</span><br>
                 ${sender.location}<br>
-                📞 ${sender.contact}<br>
+                ☎️ ${sender.contact}<br>
               </p>
             </div>
             <div class="wpcargo-col-md-6 detail-section">
@@ -37,7 +37,7 @@ if (!trackingId) {
               <p class="receiver details">
                 ${receiver.name}<br>
                 ${receiver.address}<br>
-                📞 ${receiver.contact}<br>
+                ☎️ ${receiver.contact}<br>
               </p>
             </div>
           </div>
