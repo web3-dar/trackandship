@@ -101,21 +101,21 @@
         "product": "Undisclosed",
         "qty": "2",
         "paymentMode": "Cash",
-        "status": "In Transit",
+        "status": "Delivered",
         "pickupDate": "2025-03-18",
         "pickupTime": "14:45",
         "deliveryDate": "2025-03-19",
         "deliveryTime": "09:30",
-        "comments": "Package In-Transit"
+        "comments": "Delivered"
       },
       "history": [
         {
           "date": "2025-03-18",
           "time": "15:00",
           "location": "Canada",
-          "status": "Package In-Transit",
+          "status": "Delivered",
           "updatedBy": "Fedex",
-          "remarks": "Package In-Transit"
+          "remarks": "Delivered"
         }
       ]
     }
