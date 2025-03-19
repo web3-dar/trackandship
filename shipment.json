@@ -101,21 +101,21 @@
         "product": "Undisclosed",
         "qty": "2",
         "paymentMode": "Cash",
-        "status": "Delivered",
+        "status": "Returned to Fedex facility",
         "pickupDate": "2025-03-18",
         "pickupTime": "14:45",
         "deliveryDate": "2025-03-19",
         "deliveryTime": "09:30",
-        "comments": "Delivered"
+        "comments": "Returned to Fedex facility"
       },
       "history": [
         {
-          "date": "2025-03-18",
-          "time": "15:00",
+          "date": "2025-03-19",
+          "time": "13:30",
           "location": "Canada",
-          "status": "Delivered",
+          "status": "Returned",
           "updatedBy": "Fedex",
-          "remarks": "Delivered"
+          "remarks": "Returned"
         }
       ]
     }
