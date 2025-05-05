@@ -34,6 +34,7 @@
       <div><label>Receiver Address</label><input type="text" id="receiverAddress" /></div>
       <div><label>Receiver Contact</label><input type="text" id="receiverContact" value="Confidential" /></div>
       <div><label>Product</label><input type="text" id="product" value="Undisclosed" /></div>
+      <div><label>Package</label><input type="text" id="package" value="Undisclosed" /></div>
       <div><label>Origin</label><input type="text" id="origin" /></div>
       <div><label>Destination</label><input type="text" id="destination" /></div>
       <div><label>Carrier</label><input type="text" id="carrier" /></div>
@@ -144,6 +145,7 @@
         },
         shipment: {
           product: document.getElementById("product").value,
+          package: document.getElementById("package").value,
           origin: document.getElementById("origin").value,
           destination: document.getElementById("destination").value,
           carrier: document.getElementById("carrier").value,
@@ -194,6 +196,7 @@
       document.getElementById("receiverAddress").value = s.receiver.address;
       document.getElementById("receiverContact").value = s.receiver.contact;
       document.getElementById("product").value = s.shipment.product;
+      document.getElementById("package").value = s.shipment.package;
       document.getElementById("origin").value = s.shipment.origin;
       document.getElementById("destination").value = s.shipment.destination;
       document.getElementById("carrier").value = s.shipment.carrier;
