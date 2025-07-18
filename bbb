@@ -18,15 +18,6 @@
     .edit-btn, .delete-btn { padding: 6px 12px; cursor: pointer; }
     .edit-btn { background: orange; color: white; border: none; }
     .delete-btn { background: red; color: white; border: none; }
-
-    /* NEW: History block styling */
-    .history-block {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      background: #f1f1f1;
-    }
   </style>
 </head>
 <body>
@@ -34,7 +25,7 @@
   <h2>Full Shipment Manager</h2>
 
   <form id="shipmentForm">
-   <div class="form-row">
+    <div class="form-row">
       <div><label>Tracking ID</label><input type="text" id="trackingId" required /></div>
       <div><label>Sender Name</label><input type="text" id="senderName" required /></div>
       <div><label>Sender Location</label><input type="text" id="senderLocation" /></div>
@@ -60,13 +51,16 @@
       <div><label>Comments</label><input type="text" id="comments" value="Package In-transit" /></div>
     </div>
 
-    <h3 class="section-title">Shipment History</h3>
-    <div id="historyContainer">
-      <!-- NEW: History entries will be injected here -->
+    <h3 class="section-title">Shipment History (Latest Only)</h3>
+    <div class="form-row">
+      <div><label>History Date</label><input type="date" id="historyDate" /></div>
+      <div><label>History Time</label><input type="time" id="historyTime" /></div>
+      <div><label>History Location</label><input type="text" id="historyLocation" /></div>
+      <div><label>History Status</label><input type="text" id="historyStatus" /></div>
+      <div><label>Updated By</label><input type="text" id="updatedBy" value="Fedex" /></div>
+      <div><label>Remarks</label><input type="text" id="remarks" value="Package In-Transit"/></div>
     </div>
-    <button type="button" onclick="addHistory()">➕ Add History</button>
 
-    <br><br>
     <button type="submit" id="saveBtn">Add Shipment</button>
   </form>
 
@@ -81,7 +75,9 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody id="shipmentTableBody"></tbody>
+    <tbody id="shipmentTableBody">
+      <!-- dynamic content -->
+    </tbody>
   </table>
 
   <script>
@@ -98,23 +94,6 @@
 
     const form = document.getElementById("shipmentForm");
     const tbody = document.getElementById("shipmentTableBody");
-    const historyContainer = document.getElementById("historyContainer");
-
-    const addHistory = (history = {}) => {
-      const div = document.createElement("div");
-      div.className = "history-block";
-      div.innerHTML = `
-        <div class="form-row">
-          <div><label>History Date</label><input type="date" class="historyDate" value="${history.date || ""}"/></div>
-          <div><label>History Time</label><input type="time" class="historyTime" value="${history.time || ""}"/></div>
-          <div><label>Location</label><input type="text" class="historyLocation" value="${history.location || ""}"/></div>
-          <div><label>Status</label><input type="text" class="historyStatus" value="${history.status || ""}"/></div>
-          <div><label>Updated By</label><input type="text" class="updatedBy" value="${history.updatedBy || "Fedex"}"/></div>
-          <div><label>Remarks</label><input type="text" class="remarks" value="${history.remarks || "Package In-Transit"}"/></div>
-        </div>
-      `;
-      historyContainer.appendChild(div);
-    };
 
     const fetchShipments = async () => {
       const res = await fetch(`${API_URL}/latest`, { headers });
@@ -152,17 +131,6 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
-      const historyInputs = Array.from(document.querySelectorAll(".history-block"));
-      const history = historyInputs.map(block => ({
-        date: block.querySelector(".historyDate").value,
-        time: block.querySelector(".historyTime").value,
-        location: block.querySelector(".historyLocation").value,
-        status: block.querySelector(".historyStatus").value,
-        updatedBy: block.querySelector(".updatedBy").value,
-        remarks: block.querySelector(".remarks").value,
-      }));
-
       const shipment = {
         trackingId: document.getElementById("trackingId").value,
         sender: {
@@ -193,7 +161,16 @@
           deliveryTime: document.getElementById("deliveryTime").value,
           comments: document.getElementById("comments").value
         },
-        history
+        history: [
+          {
+            date: document.getElementById("historyDate").value,
+            time: document.getElementById("historyTime").value,
+            location: document.getElementById("historyLocation").value,
+            status: document.getElementById("historyStatus").value,
+            updatedBy: document.getElementById("updatedBy").value,
+            remarks: document.getElementById("remarks").value
+          }
+        ]
       };
 
       if (editIndex > -1) {
@@ -206,14 +183,11 @@
       await saveToJsonBin();
       renderTable();
       form.reset();
-      historyContainer.innerHTML = "";
-      addHistory();
       document.getElementById("saveBtn").textContent = "Add Shipment";
     });
 
     window.editShipment = (index) => {
       const s = shipments[index];
-
       document.getElementById("trackingId").value = s.trackingId;
       document.getElementById("senderName").value = s.sender.name;
       document.getElementById("senderLocation").value = s.sender.location;
@@ -238,8 +212,13 @@
       document.getElementById("deliveryTime").value = s.shipment.deliveryTime;
       document.getElementById("comments").value = s.shipment.comments;
 
-      historyContainer.innerHTML = "";
-      s.history.forEach(h => addHistory(h));
+      const h = s.history[0] || {};
+      document.getElementById("historyDate").value = h.date || "";
+      document.getElementById("historyTime").value = h.time || "";
+      document.getElementById("historyLocation").value = h.location || "";
+      document.getElementById("historyStatus").value = h.status || "";
+      document.getElementById("updatedBy").value = h.updatedBy || "";
+      document.getElementById("remarks").value = h.remarks || "";
 
       editIndex = index;
       document.getElementById("saveBtn").textContent = "Update Shipment";
@@ -254,7 +233,7 @@
     };
 
     // Init
-    fetchShipments().then(() => addHistory()); // add empty history block initially
+    fetchShipments();
   </script>
 </body>
 </html>
