@@ -86,7 +86,7 @@ if (!trackingId) {
           </div>
 
           <div id="wpcargo-history-section" class="wpcargo-history-details">
-            <p class="header-title"><strong>Shipment History</strong> (${history.length} updates)</p>
+           
             <table id="shipment-history" class="table" style="width: 100%; border-collapse: collapse;">
               <thead>
                 <tr style="background-color: #4D148C;">
